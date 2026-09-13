@@ -18,10 +18,22 @@ html {
 body {
     background:rgb(230, 230, 230);
     color: rgb(39, 39, 39);
-    margin-inline: 25%;
+    margin: 0 auto;
+    max-width: 1000px;
     margin-bottom: 0%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     height: 100%;
+}
+
+@media (max-width: 750px) {
+    body {
+        padding-inline: 10%;
+    }
+
+    main,
+    nav {
+        margin-inline: 0;
+    }
 }
 
 header {
