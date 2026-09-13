@@ -5,51 +5,48 @@
     <title>Francesco Schiavone's personal page</title>
     <link rel="stylesheet" href="../styles.css">
 </head>
-    <body>
-        <div class="page-wrapper">
-            <header>
-                <h1><a href="../index.html">Francesco Schiavone</a></h1>
-                <h3>Physics, music and random rambling</h3>
-            </header>
-            <hr>
-            <nav>
-                <div class="menu-item"><a href="../index.html">home</a></div>
-                <div>|</div>
-                <div class="menu-item"><a href="physics.html">physics</a></div>
-                <div>|</div>
-                <div class="menu-item"><a href="music.html">music</a></div>
-                <div>|</div>
-                <div class="menu-item"><a href="blog.html">blog</a></div>
-                <div>|</div>
-                <div class="menu-item"><a href="photos.html">photos</a></div>
-                <div>|</div>
-                <div class="menu-item">contacts</div>
-            </nav>
-            <hr>
-            
-            <main>
-                <div>
-                    You can get in touch with me via email at <a href="mailto:f.bigslave@gmail.com">f.bigslave@gmail.com</a> or 
-                    <a href="mailto:francesco.schiavone@ba.infn.it">francesco.schiavone@ba.infn.it</a> or at the following social media links:
-                    <br><br>
-                    <b>Facebook:</b> <a href="https://www.facebook.com/FrancescoBigslave/">Francesco Schiavone</a><br>
-                    <b>Instagram:</b> <a href="https://www.instagram.com/f_bigslave/">@f_bigslave</a> (personal account), 
-                    <a href="https://www.instagram.com/bigslave.pix/">@bigslave.pix</a> (photography account)
-                    <br><br>
-                    If you are interested in the things I listen to, read, and watch, I log them here:
-                    <br>
-                    <a href="https://rateyourmusic.com/~bigslave">RateYourMusic</a><br>
-                    <a href="https://www.goodreads.com/user/show/181776830-francesco-schiavone">Goodreads</a><br>
-                    <a href="https://letterboxd.com/bigslave/">Letterboxd</a><br>
-                    <br>
-                    My GitHub user is <a href="https://github.com/fschiavone">fschiavone</a>, though I mostly use it to host private code.
-                </div>
-            </main>
-            <footer>
-                <hr>
-                <div style="text-align: left; width: 49%; display: inline-block; padding-top: 5pt;">© Francesco Schiavone 2026</div>
-                <div style="text-align: right; width: 49%; display: inline-block; padding-top: 5pt;"><a href="mailto:f.bigslave@gmail.com">f.bigslave@gmail.com</a></div>
-            </footer>
-        </div>
-    </body>
+
+<body>
+    <div class="page-wrapper">
+     
+        <div id="header"></div>
+
+        <div id="nav"></div>
+        
+        <main>
+            <div>
+                You can get in touch with me via email at <a href="mailto:f.bigslave@gmail.com">f.bigslave@gmail.com</a> or 
+                <a href="mailto:francesco.schiavone@ba.infn.it">francesco.schiavone@ba.infn.it</a> or at the following social media links:
+                <br><br>
+                <b>Facebook:</b> <a href="https://www.facebook.com/FrancescoBigslave/">Francesco Schiavone</a><br>
+                <b>Instagram:</b> <a href="https://www.instagram.com/f_bigslave/">@f_bigslave</a> (personal account), 
+                <a href="https://www.instagram.com/bigslave.pix/">@bigslave.pix</a> (photography account)
+                <br><br>
+                If you are interested in the things I listen to, read, and watch, I log them here:
+                <br>
+                <a href="https://rateyourmusic.com/~bigslave">RateYourMusic</a><br>
+                <a href="https://www.goodreads.com/user/show/181776830-francesco-schiavone">Goodreads</a><br>
+                <a href="https://letterboxd.com/bigslave/">Letterboxd</a><br>
+                <br>
+                My GitHub user is <a href="https://github.com/fschiavone">fschiavone</a>, though I mostly use it to host private code.
+            </div>
+        </main>
+        
+        <div id="footer"></div>
+    </div>
+
+    <script>
+        fetch("/header.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("header").innerHTML = data);
+
+        fetch("/nav.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("nav").innerHTML = data);
+
+        fetch("/footer.html")
+            .then(response => response.text())
+            .then(data => document.getElementById("footer").innerHTML = data);
+    </script>
+</body>
 </html>
